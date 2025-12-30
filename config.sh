@@ -41,6 +41,8 @@ eval "$UPDATE_CMD"
 APPS='vim htop fastfetch'
 
 echo -e '\e[1;31m4. Installing apps...'
-eval "sudo apt install $APPS"
+for app in $APPS; do
+    sudo apt install -y "$app"
+done
 
 echo -e '\e[1;32mConfig done. \e[0m'
